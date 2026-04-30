@@ -2,35 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EVK Real Estate | Resale Plots</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVK Real Estate | Premium Resale Plots</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; background-color: #f9f9f9; }
-        .plot-box { border: 1px solid #ccc; background-color: white; padding: 20px; margin: 20px auto; width: 50%; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
-        .upload-btn { background-color: #007BFF; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-size: 16px; margin-top: 20px; display: inline-block; font-weight: bold; }
-        .upload-btn:hover { background-color: #0056b3; }
+        /* General Styles */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; }
+        a { text-decoration: none; }
+        
+        /* Header / Navbar */
+        .header { background-color: #ffffff; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 24px; font-weight: bold; color: #1a365d; }
+        .logo span { color: #e28743; }
+        .contact-header { font-size: 16px; font-weight: bold; color: #1a365d; }
+
+        /* Hero Section (Like the Jain Housing banner) */
+        .hero { background-color: #1a365d; color: white; padding: 60px 50px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .hero-text { max-width: 50%; }
+        .hero-text h1 { font-size: 42px; margin-bottom: 10px; }
+        .hero-text p { font-size: 18px; line-height: 1.6; color: #d1d5db; }
+        
+        /* Quick Inquiry Form Box */
+        .hero-form { background-color: white; padding: 30px; border-radius: 8px; width: 350px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .hero-form h3 { margin-top: 0; color: #333; text-align: center; }
+        .form-input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .submit-btn { width: 100%; background-color: #e28743; color: white; border: none; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background-color: #c97134; }
+
+        /* Property Listings Grid */
+        .section-title { text-align: center; margin: 50px 0 20px; font-size: 32px; color: #1a365d; }
+        .listings { display: flex; justify-content: center; gap: 30px; padding: 0 50px 50px; flex-wrap: wrap; }
+        .plot-card { background: white; border-radius: 8px; overflow: hidden; width: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .plot-card:hover { transform: translateY(-5px); }
+        .plot-img { background-color: #ddd; height: 200px; width: 100%; display: flex; align-items: center; justify-content: center; color: #888; font-style: italic; }
+        .plot-details { padding: 20px; }
+        .plot-details h4 { margin: 0 0 10px; font-size: 20px; color: #1a365d; }
+        .plot-details p { margin: 5px 0; font-size: 14px; color: #555; }
+        .price { font-size: 18px; font-weight: bold; color: #e28743; margin-top: 10px !important; }
+
+        /* Upload Portal Section */
+        .upload-section { background-color: #e28743; padding: 50px; text-align: center; color: white; }
+        .upload-section h2 { margin-top: 0; font-size: 28px; }
+        .upload-btn { background-color: white; color: #e28743; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 18px; font-weight: bold; display: inline-block; margin-top: 15px; transition: 0.3s; }
+        .upload-btn:hover { background-color: #f4f4f4; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+        /* Footer */
+        .footer { background-color: #112240; color: #8892b0; text-align: center; padding: 30px; font-size: 14px; }
+        .footer p { margin: 5px 0; }
+        .footer span { color: white; font-weight: bold; }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .hero-text { max-width: 100%; margin-bottom: 30px; }
+            .hero-form { width: 100%; box-sizing: border-box; }
+            .header { flex-direction: column; gap: 10px; }
+        }
     </style>
 </head>
 <body>
-    <h1>EVK Real Estate</h1>
-    <p>Your trusted platform for buying and selling resale plots.</p>
-    
-    <div class="plot-box">
-        <h3>Premium Residential Plot - 1200 sq.ft</h3>
-        <p><strong>Location:</strong> Kundrathur</p>
-        <p><strong>Price:</strong> Contact for Details</p>
-        <p><strong>Status:</strong> Available for Resale</p>
+
+    <!-- Top Navigation -->
+    <header class="header">
+        <div class="logo">EVK <span>Real Estate</span></div>
+        <div class="contact-header">Sales Inquiry: +91 98765 43210</div>
+    </header>
+
+    <!-- Hero Section with Inquiry Form -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Premium Resale Plots in Prime Locations</h1>
+            <p>Secure your future with clear-title, high-appreciation land. We specialize in connecting verified sellers with serious buyers. Whether you are looking for a residential corner plot or commercial highway frontage, your search ends here.</p>
+        </div>
+        
+        <div class="hero-form">
+            <h3>Request a Call Back</h3>
+            <!-- For now, this button just reloads the page. Later, you can link this to a form too! -->
+            <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');">
+                <input type="text" class="form-input" placeholder="Your Name" required>
+                <input type="tel" class="form-input" placeholder="Phone Number" required>
+                <input type="email" class="form-input" placeholder="Email Address">
+                <button type="submit" class="submit-btn">Get Details</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <h2 class="section-title">Exclusive Resale Listings</h2>
+    <div class="listings">
+        
+        <!-- Plot 1 -->
+        <div class="plot-card">
+            <div class="plot-img">[ Plot Image Placeholder ]</div>
+            <div class="plot-details">
+                <h4>Premium Corner Plot</h4>
+                <p><strong>Location:</strong> Kundrathur</p>
+                <p><strong>Size:</strong> 1200 sq.ft</p>
+                <p><strong>Highlight:</strong> Ready for Registration</p>
+                <p class="price">Contact for Price</p>
+            </div>
+        </div>
+
+        <!-- Plot 2 -->
+        <div class="plot-card">
+            <div class="plot-img">[ Plot Image Placeholder ]</div>
+            <div class="plot-details">
+                <h4>Highway Facing Land</h4>
+                <p><strong>Location:</strong> Near Porur Hub</p>
+                <p><strong>Size:</strong> 1500 sq.ft</p>
+                <p><strong>Highlight:</strong> High Commercial Value</p>
+                <p class="price">Contact for Price</p>
+            </div>
+        </div>
+
+        <!-- Plot 3 -->
+        <div class="plot-card">
+            <div class="plot-img">[ Plot Image Placeholder ]</div>
+            <div class="plot-details">
+                <h4>Residential Layout</h4>
+                <p><strong>Location:</strong> Mangadu Area</p>
+                <p><strong>Size:</strong> 1000 sq.ft</p>
+                <p><strong>Highlight:</strong> Gated Community Style</p>
+                <p class="price">Contact for Price</p>
+            </div>
+        </div>
+
     </div>
 
-    <div class="plot-box">
-        <h3>Commercial Corner Plot - 1500 sq.ft</h3>
-        <p><strong>Location:</strong> Near Porur Hub</p>
-        <p><strong>Price:</strong> Contact for Details</p>
-        <p><strong>Status:</strong> Just Listed</p>
-    </div>
+    <!-- Customer Upload Portal -->
+    <section class="upload-section">
+        <h2>Do you have a plot to sell?</h2>
+        <p>List your property directly with us to reach hundreds of verified buyers.</p>
+        <!-- Paste your Google Form link below! -->
+        <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" class="upload-btn">Upload Your Plot Details</a>
+    </section>
 
-    <h2>Customer Portal</h2>
-    <p>Do you have a plot you want to sell with us?</p>
-    <!-- Replace the text YOUR_GOOGLE_FORM_LINK below with your actual form link -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe07HPR62Z1yzeWloPWaIp2hyjsW6BSh-9ydkiCOWk2eGlOpg/viewform?usp=header" target="_blank" class="upload-btn">Upload Your Plot Details</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>EVK Real Estate | Resale Plots & Land Consulting</p>
+        <p>Managed by <span>Esaki Kesavan V</span></p>
+        <p>Location: Kundrathur, Chennai</p>
+        <p style="margin-top: 15px; font-size: 12px;">&copy; 2026 EVK Real Estate. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
